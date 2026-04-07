@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio of a Cloud and DevOps Engineer specializing in scalable infrastructure, automation, and deployment systems." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fa62c117c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Ojeriakhi Omonuwa | Cloud & DevOps Engineer</title>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <h3>
+        <a href="#top" class="link">OO.</a>
+      </h3>
+
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#about">About</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#contact">Contact</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="https://medium.com/@ojeomonuwanosakhare" target="_blank" rel="noreferrer">Blog</a>
+          </li>
+        </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About -->
+      <div class="about center" id="about">
+        <h1>Hi, I’m <span class="about__name">Ojeriakhi Omonuwa.</span></h1>
+        <h2 class="about__role">Cloud & DevOps Engineer.</h2>
+        <p class="about__desc">
+          I am passionate about building scalable systems and simplifying how technology works behind the scenes.
+          My journey into tech started with a simple curiosity: understanding how things work and how ideas become real, usable products. Over time, that curiosity grew into a focus on cloud infrastructure and DevOps, where I get to design, automate, and improve systems that power modern applications.
+          In many of the projects I’ve worked on, I’ve encountered systems that needed better structure, scalability, or reliability. I approach these challenges by implementing cloud solutions, automating workflows, and optimizing deployment pipelines. The outcome is always the same goal: faster delivery, more stable systems, and less friction for teams and users.
+          But beyond the code and infrastructure, I care deeply about people. I enjoy guiding young adults in the right direction, sharing what I’ve learned, and helping others make better decisions about their future. For me, growth isn’t just personal, it’s something to be shared.
+          When I’m not working, you’ll find me watching or playing football, exploring graphic design, or simply enjoying moments that spark creativity and balance.
+          I’m always open to building, learning, and collaborating on meaningful projects.
+        </p>
+
+        <div class="about__contact center">
+          <a href="assets/Ojeriakhi_Omonuwa_Resume.pdf" class="btn btn--outline" target="_blank" rel="noreferrer">
+            Resume
+          </a>
+
+          <a
+            href="https://github.com"
+            aria-label="github"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+
+          <a
+            href="https://linkedin.com"
+            aria-label="linkedin"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <section id="projects" class="section projects">
+        <h2 class="section__title">Projects</h2>
+
+        <div class="projects__grid">
+          <div class="project">
+            <h3>Cloud-Native Go Application Deployment on Amazon EKS</h3>
+            <p class="project__description">Designed and deployed a cloud-native Go application on Amazon EKS using Infrastructure as Code and GitOps practices. Automated provisioning with Terraform, container orchestration with Kubernetes, and continuous delivery using GitHub Actions, Helm, and ArgoCD, enabling scalable and reliable deployments.</p>
+            <br>
+            <ul class="project__stack">
+              <li class="project__stack-item btn btn--plain">AWS EKS</li>
+              <li class="project__stack-item btn btn--plain">Terraform</li>
+              <li class="project__stack-item btn btn--plain">Docker</li>
+              <li class="project__stack-item btn btn--plain">Kubernetes</li>
+              <li class="project__stack-item btn btn--plain">Helm</li>
+              <li class="project__stack-item btn btn--plain">ArgoCD</li>
+              <li class="project__stack-item btn btn--plain">GitHub Actions</li>
+              <li class="project__stack-item btn btn--plain">Go</li>
+            </ul>
+            <br>
+            <a href="https://github.com/ojeriakhiomonuwa/Go-Application-on-an-EKS-Cluster-using-GitHub-Actions-Terraform-Helm-and-ArgoCD.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+          </div>
+
+          <div class="project">
+            <h3>Scalable 3-Tier Infrastructure Deployment with Terraform</h3>
+            <p class="project__description">Built and deployed a modular and reusable 3-tier cloud architecture consisting of web, application, and database layers. Implemented Infrastructure as Code using Terraform to ensure scalability, consistency, and efficient resource management.</p>
+            <br>
+            <ul class="project__stack">
+              <li class="project__stack-item btn btn--plain">Terraform</li>
+              <li class="project__stack-item btn btn--plain">AWS</li>
+              <li class="project__stack-item btn btn--plain">VPC</li>
+              <li class="project__stack-item btn btn--plain">EC2</li>
+              <li class="project__stack-item btn btn--plain">RDS</li>
+              <li class="project__stack-item btn btn--plain">Networking</li>
+            </ul>
+            <br>
+            <a href="https://github.com/ojeriakhiomonuwa/Terraform-3-tier-application.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+          </div>
+
+          <div class="project">
+            <h3>Amazon EKS Cluster Provisioning and Configuration</h3>
+            <p class="project__description">Provisioned and configured an Amazon EKS cluster using AWS console and best practices within Free Tier constraints. Resolved common deployment issues and ensured proper cluster setup for container orchestration.</p>
+            <br>
+            <ul class="project__stack">
+              <li class="project__stack-item btn btn--plain">AWS EKS</li>
+              <li class="project__stack-item btn btn--plain">Kubernetes</li>
+              <li class="project__stack-item btn btn--plain">EC2</li>
+              <li class="project__stack-item btn btn--plain">IAM</li>
+            </ul>
+            <br>
+            <a href="https://github.com/ojeriakhiomonuwa/Amazon-EKS-Cluster-Setup.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+          </div>
+
+          <div class="project">
+            <h3>Automated Static Website Deployment on AWS S3</h3>
+            <p class="project__description">Deployed a static website on AWS S3 using Terraform and automated CI/CD workflows with GitHub Actions. Enabled seamless deployment updates and improved delivery efficiency through Infrastructure as Code.</p>
+            <br>
+            <ul class="project__stack">
+              <li class="project__stack-item btn btn--plain">AWS S3</li>
+              <li class="project__stack-item btn btn--plain">Terraform</li>
+              <li class="project__stack-item btn btn--plain">GitHub Actions</li>
+              <li class="project__stack-item btn btn--plain">CI/CD</li>
+            </ul>
+            <br>
+            <a href="https://github.com/ojeriakhiomonuwa/Terraform-static-website.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+          </div>
+
+          <div class="project">
+            <h3>LAMP Stack Deployment on AWS EC2</h3>
+            <p class="project__description">Deployed and configured a LAMP stack (Linux, Apache, MySQL, PHP) on an AWS EC2 instance. Implemented server hardening, database configuration, and application deployment to simulate a real-world web hosting environment.</p>
+            <br>
+            <ul class="project__stack">
+              <li class="project__stack-item btn btn--plain">Linux</li>
+              <li class="project__stack-item btn btn--plain">Apache</li>
+              <li class="project__stack-item btn btn--plain">MySQL</li>
+              <li class="project__stack-item btn btn--plain">PHP</li>
+              <li class="project__stack-item btn btn--plain">AWS EC2</li>
+            </ul>
+            <br>
+            <a href="https://github.com/ojeriakhiomonuwa/LAMP-stack-project-on-AWS.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+          </div>
+
+          <div class="project">
+            <h3>More</h3>
+            <p class="project__description">Explore additional DevOps and cloud projects on my GitHub repository. Click through to view the full portfolio of work and ongoing automation projects.</p>
+            <br>
+            <a href="https://github.com/repos?q=owner%3A%40me" target="_blank" class="btn btn--outline">View More</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section skills">
+        <h2 class="section__title">Skills</h2>
+        <div class="skills__grid">
+          <div class="skills__category">
+            <h3>Technical Skills</h3>
+            <ul class="skills__list">
+              <li class="skills__list-item btn btn--plain">Linux</li>
+              <li class="skills__list-item btn btn--plain">AWS</li>
+              <li class="skills__list-item btn btn--plain">Docker</li>
+              <li class="skills__list-item btn btn--plain">Kubernetes</li>
+              <li class="skills__list-item btn btn--plain">Terraform</li>
+              <li class="skills__list-item btn btn--plain">Git</li>
+              <li class="skills__list-item btn btn--plain">GitHub Actions</li>
+              <li class="skills__list-item btn btn--plain">CI/CD Pipelines</li>
+              <li class="skills__list-item btn btn--plain">Bash Scripting</li>
+              <li class="skills__list-item btn btn--plain">Networking</li>
+              <li class="skills__list-item btn btn--plain">Nginx</li>
+              <li class="skills__list-item btn btn--plain">Apache</li>
+              <li class="skills__list-item btn btn--plain">Infrastructure as Code (IaC)</li>
+              <li class="skills__list-item btn btn--plain">Monitoring & Logging</li>
+              <li class="skills__list-item btn btn--plain">Cloud Architecture</li>
+              <li class="skills__list-item btn btn--plain">System Administration</li>
+            </ul>
+          </div>
+          <div class="skills__category">
+            <h3>Soft Skills</h3>
+            <ul class="skills__list">
+              <li class="skills__list-item btn btn--plain">Problem Solving</li>
+              <li class="skills__list-item btn btn--plain">Critical Thinking</li>
+              <li class="skills__list-item btn btn--plain">Attention to Detail</li>
+              <li class="skills__list-item btn btn--plain">Communication</li>
+              <li class="skills__list-item btn btn--plain">Team Collaboration</li>
+              <li class="skills__list-item btn btn--plain">Time Management</li>
+              <li class="skills__list-item btn btn--plain">Adaptability</li>
+              <li class="skills__list-item btn btn--plain">Continuous Learning</li>
+              <li class="skills__list-item btn btn--plain">Leadership</li>
+              <li class="skills__list-item btn btn--plain">Mentorship</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section experience">
+        <h2 class="section__title">Experience</h2>
+        <div class="experience-item experience__entry">
+          <h3><strong>DevOps Intern / Ambassador</strong></h3>
+          <ul class="experience__meta">
+            <li><strong>Company:</strong> Infracodebase</li>
+            <li><strong>Type:</strong> Remote</li>
+            <li><strong>Duration:</strong> September 2025 – January 2026</li>
+          </ul>
+          <ul class="experience__list">
+            <li>Worked within a cloud infrastructure platform focused on Infrastructure as Code and automated DevOps workflows, addressing inconsistencies in deployment processes by implementing Terraform and Docker-based solutions, resulting in faster and more reliable environment provisioning.</li>
+            <li>Identified inefficiencies in manual release cycles, designed and deployed CI/CD pipelines using GitHub Actions, and enabled consistent, automated application delivery with reduced deployment time and fewer errors.</li>
+            <li>Improved unstable staging environments by standardizing infrastructure using Kubernetes orchestration and AWS configurations, leading to more predictable deployments and reduced rollback frequency.</li>
+            <li>Enhanced system observability by introducing structured logging and monitoring practices across Linux environments, enabling quicker issue detection and improved operational stability.</li>
+            <li>Strengthened team collaboration by organizing version-controlled DevOps scripts and documentation, improving workflow clarity and enabling smoother coordination across remote teams.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Get In Touch</h2>
+        <p class="contact__subtitle">Have a project in mind or want to collaborate? Let’s connect.</p>
+        <div class="contact__links center">
+          <a href="mailto:ojeriakhiomonuwa6@gmail.com" class="btn btn--outline" target="_blank">Email</a>
+          <a href="tel:+2347016140157" class="btn btn--outline">Phone Number</a>
+          <a href="https://www.linkedin.com/in/ojeriakhi-omonuwa-12ab61190" target="_blank" class="btn btn--outline">LinkedIn</a>
+          <a href="https://github.com/ojeriakhiomonuwa" target="_blank" class="btn btn--outline">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a href="#top" class="link footer__link">
+        Built by Ojeriakhi Omonuwa
+      </a>
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
