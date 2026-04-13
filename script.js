@@ -61,3 +61,28 @@ const scrollUp = () => {
 }
 
 document.addEventListener('scroll', scrollUp)
+
+const applyScrollReveal = () => {
+	const revealElements = document.querySelectorAll(
+		'.about__photo, .project, .skills__category, .tools-section, .experience-item, .contact, .footer'
+	)
+
+	const observer = new IntersectionObserver(
+		(entries, obs) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible')
+					obs.unobserve(entry.target)
+				}
+			})
+		},
+		{ threshold: 0.15, rootMargin: '0px 0px -10px 0px' }
+	)
+
+	revealElements.forEach(element => {
+		element.classList.add('reveal')
+		observer.observe(element)
+	})
+}
+
+applyScrollReveal()

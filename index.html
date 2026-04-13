@@ -58,40 +58,50 @@
 
     <main>
       <!-- About -->
-      <div class="about center" id="about">
-        <h1>Hi, I’m <span class="about__name">Ojeriakhi Omonuwa.</span></h1>
-        <h2 class="about__role">Cloud & DevOps Engineer.</h2>
-        <p class="about__desc">
-          I am passionate about building scalable systems and simplifying how technology works behind the scenes.
-          My journey into tech started with a simple curiosity: understanding how things work and how ideas become real, usable products. Over time, that curiosity grew into a focus on cloud infrastructure and DevOps, where I get to design, automate, and improve systems that power modern applications.
-          In many of the projects I’ve worked on, I’ve encountered systems that needed better structure, scalability, or reliability. I approach these challenges by implementing cloud solutions, automating workflows, and optimizing deployment pipelines. The outcome is always the same goal: faster delivery, more stable systems, and less friction for teams and users.
-          But beyond the code and infrastructure, I care deeply about people. I enjoy guiding young adults in the right direction, sharing what I’ve learned, and helping others make better decisions about their future. For me, growth isn’t just personal, it’s something to be shared.
-          When I’m not working, you’ll find me watching or playing football, exploring graphic design, or simply enjoying moments that spark creativity and balance.
-          I’m always open to building, learning, and collaborating on meaningful projects.
-        </p>
+      <section class="about" id="about">
+        <div class="about__layout">
+          <div class="about__photo">
+            <img
+              src="assets/unnamed.png"
+              alt="Profile photo of Ojeriakhi Omonuwa"
+              class="about__image"
+            />
+          </div>
 
-        <div class="about__contact center">
-          <a href="assets/Ojeriakhi_Omonuwa_Resume.pdf" class="btn btn--outline" target="_blank" rel="noreferrer">
-            Resume
-          </a>
+          <div class="about__content">
+            <div class="about__headline">
+              <h1>Hi, I’m <span class="about__name">Ojeriakhi Omonuwa.</span></h1>
+              <h2 class="about__role">Cloud & DevOps Engineer.</h2>
+            </div>
 
-          <a
-            href="https://github.com"
-            aria-label="github"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
+            <p class="about__desc">
+              I am passionate about building scalable systems and simplifying how technology works behind the scenes. My interest in tech started with curiosity about how ideas become real products, which evolved into a focus on cloud infrastructure and DevOps. I design, automate, and optimize systems to improve scalability, reliability, and delivery speed. Beyond engineering, I enjoy mentoring others and sharing knowledge, and in my free time I explore football, graphic design, and creative activities that keep me balanced and inspired.
+            </p>
 
-          <a
-            href="https://linkedin.com"
-            aria-label="linkedin"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
-          </a>
+            <div class="about__contact center">
+              <a href="assets/Ojeriakhi_Omonuwa_Resume.pdf" class="btn btn--outline" target="_blank" rel="noreferrer">
+                Resume
+              </a>
+
+              <a
+                href="https://github.com"
+                aria-label="github"
+                class="link link--icon"
+              >
+                <i aria-hidden="true" class="fab fa-github"></i>
+              </a>
+
+              <a
+                href="https://linkedin.com"
+                aria-label="linkedin"
+                class="link link--icon"
+              >
+                <i aria-hidden="true" class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       <!-- Projects -->
       <section id="projects" class="section projects">
@@ -113,7 +123,9 @@
               <li class="project__stack-item btn btn--plain">Go</li>
             </ul>
             <br>
-            <a href="https://github.com/ojeriakhiomonuwa/Go-Application-on-an-EKS-Cluster-using-GitHub-Actions-Terraform-Helm-and-ArgoCD.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+            <div style="text-align: center;">
+              <a href="https://github.com/ojeriakhiomonuwa/Go-Application-on-an-EKS-Cluster-using-GitHub-Actions-Terraform-Helm-and-ArgoCD.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+            </div>
           </div>
 
           <div class="project">
@@ -129,7 +141,9 @@
               <li class="project__stack-item btn btn--plain">Networking</li>
             </ul>
             <br>
-            <a href="https://github.com/ojeriakhiomonuwa/Terraform-3-tier-application.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+            <div style="text-align: center;">
+              <a href="https://github.com/ojeriakhiomonuwa/Terraform-3-tier-application.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+            </div>
           </div>
 
           <div class="project">
@@ -143,7 +157,9 @@
               <li class="project__stack-item btn btn--plain">IAM</li>
             </ul>
             <br>
-            <a href="https://github.com/ojeriakhiomonuwa/Amazon-EKS-Cluster-Setup.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+            <div style="text-align: center;">
+              <a href="https://github.com/ojeriakhiomonuwa/Amazon-EKS-Cluster-Setup.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+            </div>
           </div>
 
           <div class="project">
@@ -157,7 +173,9 @@
               <li class="project__stack-item btn btn--plain">CI/CD</li>
             </ul>
             <br>
-            <a href="https://github.com/ojeriakhiomonuwa/Terraform-static-website.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+            <div style="text-align: center;">
+              <a href="https://github.com/ojeriakhiomonuwa/Terraform-static-website.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+            </div>
           </div>
 
           <div class="project">
@@ -172,14 +190,16 @@
               <li class="project__stack-item btn btn--plain">AWS EC2</li>
             </ul>
             <br>
-            <a href="https://github.com/ojeriakhiomonuwa/LAMP-stack-project-on-AWS.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+            <div style="text-align: center;">
+              <a href="https://github.com/ojeriakhiomonuwa/LAMP-stack-project-on-AWS.git" target="_blank" class="btn btn--outline">View on GitHub</a>
+            </div>
           </div>
 
-          <div class="project">
+          <div class="project" style="text-align: center;">
             <h3>More</h3>
             <p class="project__description">Explore additional DevOps and cloud projects on my GitHub repository. Click through to view the full portfolio of work and ongoing automation projects.</p>
             <br>
-            <a href="https://github.com/repos?q=owner%3A%40me" target="_blank" class="btn btn--outline">View More</a>
+            <a href="https://github.com/repos?q=owner%3A%40me" target="_blank" class="btn btn--outline" style="display: block; margin: 0 auto; width: fit-content;">View More</a>
           </div>
         </div>
       </section>
@@ -227,6 +247,71 @@
         </div>
       </section>
 
+      <!-- DevOps Tools -->
+      <section id="tools" class="section tools-section">
+        <div class="section__intro">
+          <h2 class="section__title">DevOps Tools & Technologies</h2>
+          <p class="section__subtitle">Tools and platforms I work with.</p>
+        </div>
+
+        <div class="tools__grid">
+          <article class="tool-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS logo" class="tool-card__logo" />
+            <p class="tool-card__name">AWS</p>
+          </article>
+
+          <article class="tool-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure logo" class="tool-card__logo" />
+            <p class="tool-card__name">Azure</p>
+          </article>
+
+          <article class="tool-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform logo" class="tool-card__logo" />
+            <p class="tool-card__name">Terraform</p>
+          </article>
+
+          <article class="tool-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker logo" class="tool-card__logo" />
+            <p class="tool-card__name">Docker</p>
+          </article>
+
+          <article class="tool-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes logo" class="tool-card__logo" />
+            <p class="tool-card__name">Kubernetes</p>
+          </article>
+
+          <article class="tool-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins logo" class="tool-card__logo" />
+            <p class="tool-card__name">Jenkins</p>
+          </article>
+
+          <article class="tool-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub logo" class="tool-card__logo" />
+            <p class="tool-card__name">GitHub</p>
+          </article>
+
+          <article class="tool-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux logo" class="tool-card__logo" />
+            <p class="tool-card__name">Linux</p>
+          </article>
+
+          <article class="tool-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" alt="Ansible logo" class="tool-card__logo" />
+            <p class="tool-card__name">Ansible</p>
+          </article>
+
+          <article class="tool-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" alt="Prometheus logo" class="tool-card__logo" />
+            <p class="tool-card__name">Prometheus</p>
+          </article>
+
+          <article class="tool-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana logo" class="tool-card__logo" />
+            <p class="tool-card__name">Grafana</p>
+          </article>
+        </div>
+      </section>
+
       <!-- Experience -->
       <section id="experience" class="section experience">
         <h2 class="section__title">Experience</h2>
@@ -248,7 +333,7 @@
             <li>Implemented basic cloud security practices, including firewall configuration, SSH hardening, and access management.</li>
           </ul>
         </div>
-        <div class="experience-item experience__entry">
+        <div class="experience-item experience__entry" style="margin-top: 2rem;">
           <h3><strong>DevOps Ambassador</strong></h3>
           <ul class="experience__meta">
             <li><strong>Company:</strong> Infracodebase</li>
