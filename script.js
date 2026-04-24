@@ -1,88 +1,99 @@
 const body = document.body
+const root = document.documentElement
 
-const btnTheme = document.querySelector('.fa-moon')
-const btnHamburger = document.querySelector('.fa-bars')
+const themeToggle = document.querySelector('#theme-toggle')
+const btnHamburger = document.querySelector('.nav__hamburger')
+const btnHamburgerIcon = btnHamburger.querySelector('i')
+const navList = document.querySelector('.nav__list')
 
-const addThemeClass = (bodyClass, btnClass) => {
-  body.classList.add(bodyClass)
-  btnTheme.classList.add(btnClass)
+const storageKey = 'portfolio-theme'
+
+const getStoredTheme = () => {
+  try {
+    return localStorage.getItem(storageKey)
+  } catch (error) {
+    console.warn('Theme preference could not be read.', error)
+    return null
+  }
 }
 
-const getBodyTheme = localStorage.getItem('portfolio-theme')
-const getBtnTheme = localStorage.getItem('portfolio-btn-theme')
-
-addThemeClass(getBodyTheme, getBtnTheme)
-
-const isDark = () => body.classList.contains('dark')
-
-const setTheme = (bodyClass, btnClass) => {
-
-	body.classList.remove(localStorage.getItem('portfolio-theme'))
-	btnTheme.classList.remove(localStorage.getItem('portfolio-btn-theme'))
-
-  addThemeClass(bodyClass, btnClass)
-
-	localStorage.setItem('portfolio-theme', bodyClass)
-	localStorage.setItem('portfolio-btn-theme', btnClass)
+const saveTheme = theme => {
+  try {
+    localStorage.setItem(storageKey, theme)
+  } catch (error) {
+    console.warn('Theme preference could not be saved.', error)
+  }
 }
 
-const toggleTheme = () =>
-	isDark() ? setTheme('light', 'fa-moon') : setTheme('dark', 'fa-sun')
+const updateThemeToggleUi = isDarkMode => {
+  const nextModeLabel = isDarkMode ? 'Light mode' : 'Dark mode'
 
-btnTheme.addEventListener('click', toggleTheme)
+  themeToggle.setAttribute(
+    'aria-label',
+    `Activate ${nextModeLabel.toLowerCase()}`
+  )
+  themeToggle.setAttribute('aria-pressed', String(isDarkMode))
+  themeToggle.dataset.tooltip = nextModeLabel
+}
+
+const setTheme = theme => {
+  const isDarkMode = theme === 'dark'
+
+  body.classList.toggle('dark-mode', isDarkMode)
+  root.classList.toggle('dark-mode', isDarkMode)
+  updateThemeToggleUi(isDarkMode)
+  saveTheme(theme)
+}
+
+const initialTheme = getStoredTheme() === 'dark' ? 'dark' : 'light'
+setTheme(initialTheme)
+
+themeToggle.addEventListener('click', () => {
+  const nextTheme = body.classList.contains('dark-mode') ? 'light' : 'dark'
+  setTheme(nextTheme)
+})
 
 const displayList = () => {
-	const navUl = document.querySelector('.nav__list')
+  const isMenuOpen = btnHamburgerIcon.classList.contains('fa-bars')
 
-	if (btnHamburger.classList.contains('fa-bars')) {
-		btnHamburger.classList.remove('fa-bars')
-		btnHamburger.classList.add('fa-times')
-		navUl.classList.add('display-nav-list')
-	} else {
-		btnHamburger.classList.remove('fa-times')
-		btnHamburger.classList.add('fa-bars')
-		navUl.classList.remove('display-nav-list')
-	}
+  btnHamburgerIcon.classList.toggle('fa-bars', !isMenuOpen)
+  btnHamburgerIcon.classList.toggle('fa-times', isMenuOpen)
+  navList.classList.toggle('display-nav-list', isMenuOpen)
 }
 
 btnHamburger.addEventListener('click', displayList)
 
 const scrollUp = () => {
-	const btnScrollTop = document.querySelector('.scroll-top')
+  const btnScrollTop = document.querySelector('.scroll-top')
+  const shouldDisplay =
+    body.scrollTop > 500 || document.documentElement.scrollTop > 500
 
-	if (
-		body.scrollTop > 500 ||
-		document.documentElement.scrollTop > 500
-	) {
-		btnScrollTop.style.display = 'block'
-	} else {
-		btnScrollTop.style.display = 'none'
-	}
+  btnScrollTop.style.display = shouldDisplay ? 'grid' : 'none'
 }
 
 document.addEventListener('scroll', scrollUp)
 
 const applyScrollReveal = () => {
-	const revealElements = document.querySelectorAll(
-		'.about__photo, .project, .skills__category, .tools-section, .experience-item, .contact, .footer'
-	)
+  const revealElements = document.querySelectorAll(
+    '.about__photo, .project, .skills__category, .tools-section, .experience-item, .contact, .footer'
+  )
 
-	const observer = new IntersectionObserver(
-		(entries, obs) => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add('visible')
-					obs.unobserve(entry.target)
-				}
-			})
-		},
-		{ threshold: 0.15, rootMargin: '0px 0px -10px 0px' }
-	)
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible')
+          obs.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.15, rootMargin: '0px 0px -10px 0px' }
+  )
 
-	revealElements.forEach(element => {
-		element.classList.add('reveal')
-		observer.observe(element)
-	})
+  revealElements.forEach(element => {
+    element.classList.add('reveal')
+    observer.observe(element)
+  })
 }
 
 applyScrollReveal()

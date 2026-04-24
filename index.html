@@ -14,10 +14,22 @@
       src="https://kit.fontawesome.com/fa62c117c7.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      (function () {
+        try {
+          var savedTheme = localStorage.getItem("portfolio-theme");
+          if (savedTheme === "dark") {
+            document.documentElement.classList.add("dark-mode");
+          }
+        } catch (error) {
+          console.warn("Theme preference could not be loaded.", error);
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="styles.css" />
     <title>Ojeriakhi Omonuwa | Cloud & DevOps Engineer</title>
   </head>
-  <body class="light" id="top">
+  <body id="top">
     <header class="header center">
       <h3>
         <a href="#top" class="link">OO.</a>
@@ -42,8 +54,16 @@
           </li>
         </ul>
 
-        <button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        <button
+          type="button"
+          id="theme-toggle"
+          aria-label="Activate dark mode"
+          aria-pressed="false"
+          data-tooltip="Dark mode"
+          class="btn btn--icon theme-toggle"
+        >
+          <span aria-hidden="true" class="theme-toggle__icon theme-toggle__icon--moon">&#9790;</span>
+          <span aria-hidden="true" class="theme-toggle__icon theme-toggle__icon--sun">&#9728;</span>
         </button>
 
         <button
